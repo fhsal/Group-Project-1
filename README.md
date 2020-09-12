@@ -18,3 +18,15 @@ WHEN I select a meal choice.
 THEN I am presented with the ingredients break down (shopping list)
 WHEN I select a meal choice 
 THEN I am also paired with a drink selection.
+
+
+• Team Hannibal Lecter
+• Team Members
+    - Frank Salvo
+    - Juliette Elyse
+    - Mike Kolek
+• Project title
+    - Dinning with Developers
+• Project descriptions
+    -Meal Planning 
+• (optionally) user story and/or acceptance criteria and any additional information you find necessary
