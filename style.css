@@ -1,0 +1,38 @@
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    color: #B30089;
+}
+.hero.is-primary .title {
+    color: #b30089;
+}
+h2 {
+    color: #b30089;
+}
+.navbar-brand {
+    background-color: #eefcce ;
+}
+.navbar-end {
+    background-color: #eefcce ;
+}
+.hero-body {
+    background-color: #C0C999;
+}
+
+    @media (max-width: 500px) {
+        p {
+          font-size: 1.25rem; 
+        }
+      }
+      @media (orientation: landscape) {
+    
+      }
+      @media(orientation: portrait) {
+    
+      }
+      @media (min-width: 800px) {
+        p { font-size: 1.5rem;
+            line-height: 1.5;
+    }
+}
+/* overriding bulma stylings  */
