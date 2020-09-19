@@ -9,14 +9,9 @@ h1 {
 h2 {
     color: #b30089;
 }
-.navbar-brand {
-    background-color: #eefcce ;
-}
-.navbar-end {
-    background-color: #eefcce ;
-}
+
 .hero-body {
-    background-color: #C0C999;
+    background-color: #5B8E7D;
 }
 
     @media (max-width: 500px) {

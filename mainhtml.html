@@ -22,7 +22,8 @@
               </div>
             </div>
           </section>
-          <div class="hero-head">
+          <!-- navbar -->
+          <div class="hero-head"> 
             <nav class="navbar">
               <div class="container">
                 <div class="navbar-brand">
@@ -37,9 +38,6 @@
                     </a>
                     <span class="navbar-item">
                       <a class="button is-primary is-inverted">
-                        <span class="icon">
-                          <i class="fab fa-hamburger"></i>
-                        </span>
                         <span>Saved Recipes</span>
                       </a>
                     </span>
@@ -48,26 +46,17 @@
               </div>
             </nav>
           </div>
+          <!-- input field for user input -->
         <div class="container is-fluid">
             <div class="inputforms">
                 <div class="field">
                     <div class="control">
-                      <input class="input is-primary" id="input1" type="text" placeholder="list ingredient">
+                      <input class="input is-primary" id="input1" type="text" placeholder="main ingredient eg; beef, seafood, chicken">
                     </div>
                   </div>
                   <div class="field">
                     <div class="control">
-                      <input class="input is-primary" id="input2" type="text" placeholder="list ingredient">
-                    </div>
-                  </div>
-                  <div class="field">
-                    <div class="control">
-                      <input class="input is-primary" id="input3" type="text" placeholder="list ingredient">
-                    </div>
-                  </div>
-                  <div class="field">
-                    <div class="control">
-                      <input class="input is-primary" id="input4" type="text" placeholder="list ingredient">
+                      <input class="input is-primary" id="input3" type="text" placeholder="cuisine type eg; greek, chinese, mexican">
                     </div>
                   </div>
             </div>
@@ -76,12 +65,20 @@
                 <div class="control">
                   <div class="select is-primary">
                     <select>
+                        <!-- dietary restriction criteria -->
                       <option>Dietary Restrictions</option>
                       <option id = "nut">nut allergy</option>
-                      <option id = "dairy">dairy allergy</option>
+                      <option id = "dairy">sugar free</option>
                       <option id = "gluten">gluten allergy</option>
                     </select>
                     <br>
+                    <!-- wine pairing -->
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Do you want to include a wine pairing?
+                      </label>
+                      <br>
+                      <br>
                     <div class="buttons">
                         <button class="button is-primary is-light"> Submit </button>
                 </div>
