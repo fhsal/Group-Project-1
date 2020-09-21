@@ -33,12 +33,34 @@
                 </div>
                 <div id="navbarMenuHeroA" class="navbar-menu">
                   <div class="navbar-end"></div>
-                    <a class="navbar-item is-active">
+                    <a class="navbar-item is-active" style: >
                       Home
                     </a>
                     <span class="navbar-item">
+<<<<<<< HEAD
                       <a class="button is-primary is-inverted">
                         <span>Saved Recipes</span>
+=======
+                       <a class="button is-primary is-inverted">
+                         <span class="icon">
+                           <i class="fab fa-hamburger"></i>
+                         </span>
+                         <span class="navbar-item">
+                          <a class="button is-primary is-inverted" href ="./htmlfiles/dinnerResults.html" >
+                           <span>Dinner Search Results</span>
+  
+                       <span class="navbar-item">
+                           <a class="button is-primary is-inverted" href ="./htmlfiles/menupage.html">
+                           <span>Dinner Menu</span>
+  
+                       <span class="navbar-item">
+                           <a class="button is-primary is-inverted" href ="./htmlfiles/wine2.html">
+                           <span>Wine Pairing</span>
+  
+                       <span class="navbar-item">
+                       <a class="button is-primary is-inverted" href ="./htmlfiles/savedrecipes.html">
+                       <span>Saved Recipes </span>
+>>>>>>> fc145387f3864ec467ee0af1d47c3707b1952366
                       </a>
                     </span>
                   </div>
@@ -50,15 +72,53 @@
         <div class="container is-fluid">
             <div class="inputforms">
                 <div class="field">
+<div class = "intro">
+  <br><br>
+  <p style="font-family:'Garamond'" > 
+    
+  <!-- <b> -->
+
+  Welcome to dinner!   <br>
+  Build a menu for your dinner party by specifying the type of cuisine, main course and if you and/or your guests have dietary restrictions.
+  After entering that information and hitting "submit" you will be presented with three menu items which match your criteria.  Select one and a recommended wine 
+  pairing will be provided on the 'wine pairing' page - you can switch wine paring between cuisine and main course type.  Once you select a main course and wine, a 
+  menu for your guests will be generated and you will have the recipe to prepare the meal.  You can also save recipies if you would
+  like to keep your selection and search for more! 
+
+<!-- </b> -->
+
+  <br><br>
+  </p>
+
+</div>
+
                     <div class="control">
+<<<<<<< HEAD
                       <input class="input is-primary" id="input1" type="text" placeholder="main ingredient eg; beef, seafood, chicken">
+=======
+                      <input class="input is-primary" id="input1" type="text" placeholder="Cuisine: Italian, French, Chinese, etc.">
+>>>>>>> fc145387f3864ec467ee0af1d47c3707b1952366
                     </div>
                   </div>
                   <div class="field">
                     <div class="control">
+<<<<<<< HEAD
                       <input class="input is-primary" id="input2" type="text" placeholder="cuisine type eg; greek, chinese, mexican">
+=======
+                      <input class="input is-primary" id="input2" type="text" placeholder="Type of food:  Beef, Chicken, Pork, etc.">
                     </div>
                   </div>
+                  <!-- <div class="field">
+                    <div class="control">
+                      <input class="input is-primary" id="input3" type="text" placeholder="list ingredient">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="control">
+                      <input class="input is-primary" id="input4" type="text" placeholder="list ingredient">
+>>>>>>> fc145387f3864ec467ee0af1d47c3707b1952366
+                    </div>
+                  </div> -->
             </div>
             <br>
             <div class="field">
@@ -80,12 +140,19 @@
                       <br>
                       <br>
                     <div class="buttons">
-                        <button class="button is-primary is-light"> Submit </button>
+                        <button id = "submitMain" class="button is-primary is-light"> Submit </button>
                 </div>
               </div>
           </div> 
     </head>
     <body>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src= "./htmlfiles/wineScript.js"></script>
+
+
+
+
+
 
     </body>
 </html>

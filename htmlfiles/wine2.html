@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Dinner with Developers</title>
+      <link rel="icon" type="image/png" href="../images/fav.png">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
+      <link rel="stylesheet" href="../style.css">
+      <section class="hero is-primary is-small">
+         <div class="hero-body">
+            <div class="container">
+               <h1 class="title" href= "../mainhtml.html">
+                  Dinner with Developers
+               </h1>
+               <h2 class="subtitle" id="winepairingtitle"> Wine Pairing </h2>
+            </div>
+         </div>
+      </section>
+      <div class="hero-head">
+         <nav class="navbar">
+            <div class="container">
+               <div class="navbar-brand">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+               <div id="navbarMenuHeroA" class="navbar-menu">
+                  <div class="navbar-end"></div>
+                  <a class="navbar-item is-active" href ="../mainhtml.html">
+                  Home
+                  </a>
+                  <span class="navbar-item">
+                     <a class="button is-primary is-inverted">
+                       <span class="icon">
+                         <i class="fab fa-hamburger"></i>
+                       </span>
+                       <span class="navbar-item">
+                        <a class="button is-primary is-inverted" href ="./dinnerResults.html" >
+                         <span>Dinner Search Results</span>
+
+                     <span class="navbar-item">
+                         <a class="button is-primary is-inverted" href ="./menupage.html">
+                         <span>Dinner Menu</span>
+
+                     <span class="navbar-item">
+                         <a class="button is-primary is-inverted" href ="./wine2.html">
+                         <span>Wine Pairing</span>
+
+                     <span class="navbar-item">
+                     <a id = "switchWine" class="button is-primary is-inverted">
+                     <span>Switch wine pairing</span>
+
+                     <span class="navbar-item">
+                     <a class="button is-primary is-inverted" href ="./savedrecipes.html">
+                     <span>Saved Recipes </span>
+                  </a>
+                  </span>
+               </div>
+            </div>
+      </div>
+      </nav>
+      </div>
+      <!-- wine display boxes -->
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-primary is-light">
+                  <!-- title -->
+                <h1 class="winetitle"></h1>Winetitle<!-- tobedeleted -->
+                <p class="winedescription">Winedescription<!-- tobedeleted --></p>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-primary is-light">
+                   <!-- image -->
+                <p id="winename"></p>
+                <p id="wineinfo"> </p>
+                <!-- <figure class="image is-4by3"> -->
+                  <!-- <img id = "wineimage" src="https://bulma.io/images/placeholders/640x480.png"> -->
+                <!-- </figure> -->
+              </article>
+            </div>
+          </div>
+          <div class="tile is-parent">
+               <!-- pairing -->
+            <article class="tile is-child notification is-primary is-light">
+              <!-- <p class="pairingtitle"> To be paired with: </p>
+              <p class="pairingname">pairingname<!-- tobedeleted </p>-->
+              <div class="content">
+    
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-primary is-light">
+            <div class="content">
+                 <!-- country -->
+                 <p class="pairingtitle"></p>
+                 <!-- <p class="pairingname">pairingnametobedeleted</p> -->
+              <div class="content">
+                     <div class="content">
+                 <!-- country -->
+              <p class="ratingTitle"></p>
+              <!-- <p class="rating">countrynametobedeleted</p> -->
+              <p class="pricetitle"></p>
+              <!-- <p class="price">countrynametobedeleted</p> -->
+              <div class="content">
+              </div>
+            </div>
+          </article>
+        </div>
+
+
+
+        
+      </div>
+      <div class="buttons">
+         <button id ="savebutton" class="button is-primary is-light"> Save Wine </button>
+      </div>
+      </div>
+      </div> 
+   </head>
+   <body>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src= "./wineScript.js"></script>
+
+<script>
+
+foodChoice = localStorage.cuisineChoice;
+
+getWineParing (); 
+
+</script>
+
+
+   
+   </body>
+</html>
