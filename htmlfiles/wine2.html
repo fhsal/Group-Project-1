@@ -37,6 +37,15 @@
                   <span class="navbar-item">
                   <a class="button is-primary is-inverted">
                   <span>Saved Recipes</span>
+                  <span class="navbar-item">
+                     <a class="button is-primary is-inverted">
+                     <span>Recipe Search Results</span>
+                     <span class="navbar-item">
+                        <a class="button is-primary is-inverted">
+                        <span>Dinner Menu</span>
+                  <span class="navbar-item">
+                     <a id = "switchWine" class="button is-primary is-inverted">
+                     <span>Switch wine pairing</span>
                   </a>
                   </span>
                </div>
@@ -81,20 +90,24 @@
           <article class="tile is-child notification is-primary is-light">
             <div class="content">
                  <!-- country -->
-                 <p class="pairingtitle"> To be paired with: </p>
+                 <p class="pairingtitle"></p>
                  <!-- <p class="pairingname">pairingnametobedeleted</p> -->
               <div class="content">
                      <div class="content">
                  <!-- country -->
-              <p class="ratingTitle">Rating:</p>
+              <p class="ratingTitle"></p>
               <!-- <p class="rating">countrynametobedeleted</p> -->
-              <p class="pricetitle">Price:</p>
+              <p class="pricetitle"></p>
               <!-- <p class="price">countrynametobedeleted</p> -->
               <div class="content">
               </div>
             </div>
           </article>
         </div>
+
+
+
+        
       </div>
       <div class="buttons">
          <button id ="savebutton" class="button is-primary is-light"> Save Wine </button>
@@ -105,103 +118,17 @@
    <body>
 
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <!-- <script src=wineScript></script> -->
+      <script src= "./wineScript.js"></script>
 
 <script>
 
-var wineAPIKey = "77ee9b5219954db79536f73ad6175916";
-   var foodChoice = prompt("enter your type of meal for wine recommendations!");
-   var winePair1;
-   var winePair2;
-   var winePair3;
-   var pairingText;
-   var foodResponse;
-   var wineResponse;
-   var rating;
-   var price; 
+foodChoice = localStorage.cuisineChoice;
 
-
-    wineURL ="https://api.spoonacular.com/food/wine/pairing?food=" + foodChoice+ "&apiKey=" +wineAPIKey; 
-
-        $.ajax({
-        url: wineURL,
-        method: "GET"
-        })
-        // We store all of the retrieved data inside of an object called "response"
-        .then(function(response) {
-
-            // Log the queryURL
-            console.log(response);
-            wineResponse = response; 
-            winePair1 = response.pairedWines[0];
-            winePair2 = response.pairedWines[1];
-            winePair3 = response.pairedWines[2];
-            pairingText = response.pairingText;
-            wineChoiceTitle = wineResponse.productMatches[0].title;
-            wineChoiceDesc = wineResponse.productMatches[0].description;
-            wineChoiceImg = wineResponse.productMatches[0].imageUrl;
-            wineURL = "<img src ='"+ wineChoiceImg + "'</img>";
-            rating = Math.round((wineResponse.productMatches[0].averageRating)*100);  
-            price = wineResponse.productMatches[0].price;  
-
-            console.log(winePair1);
-            console.log(winePair2);
-            console.log(winePair3);
-            console.log(pairingText);
-
-            // var wineDiv = $("<div class='wine'>");
-
-// Inserting the pairing recommendations into the page
-
-            // $('#wineDiv').text(winePair1);
-            $('#wineinfo').append(wineURL);
-            $('#wineinfo').append('<br>');
-            $('#wineinfo').append(wineChoiceDesc);
-            $('#winename').append(wineChoiceTitle);
-            $('.winedescription').text(pairingText);
-            // $('.winedescription').text(wineChoiceDesc);
-            $('.pairingtitle').append("  " + foodChoice);
-            $('.winetitle').text(winePair1);
-            $('.ratingTitle').append("  " + rating);
-            $('.pricetitle').append("  " + price);
-            
-
-
-            // Displaying the pairing recommendations
-           
-            // $('#wineDiv').text(winePair1);
-            // $('#wineDiv').append('<br><br>');
-            // $('#wineDiv').append(winePair2);
-            // $('#wineDiv').append('<br><br>');
-            // $('#wineDiv').append(winePair3);
-            // $('#wineDiv').append('<br><br>');
-            // $('#wineDiv').append(pairingText);
-            // $('#wineDiv').append('<br><br>');
-            // $('#wineDiv').append(wineChoiceTitle);
-            // $('#wineDiv').append('<br><br>');
-            // $('#wineDiv').append(wineChoiceDesc);
-            // $('#wineDiv').append('<br><br>');
-            // $('#wineDiv').append(wineURL);
-
-
-      });  
-
-
-
-
-
-
-
-
-
-
-
+getWineParing (); 
 
 </script>
 
 
-
-
-
+   
    </body>
 </html>
