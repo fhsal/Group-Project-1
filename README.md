@@ -26,7 +26,7 @@ THEN I am also paired with a drink selection.
     - Juliette Elyse
     - Mike Kolek
 • Project title
-    - Dinning with Developers
+    - Dining with Developers
 • Project descriptions
     -Meal Planning 
 • (optionally) user story and/or acceptance criteria and any additional information you find necessary
