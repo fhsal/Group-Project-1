@@ -18,6 +18,8 @@
    var winePair2;
    var winePair3;
    var pairingText;
+   var foodResponse;
+   var wineResponse;
 
 
     wineURL ="https://api.spoonacular.com/food/wine/pairing?food=" + foodChoice+ "&apiKey=" +wineAPIKey; 
@@ -31,10 +33,16 @@
 
             // Log the queryURL
             console.log(response);
+            wineResponse = response; 
             winePair1 = response.pairedWines[0];
             winePair2 = response.pairedWines[1];
             winePair3 = response.pairedWines[2];
             pairingText = response.pairingText;
+            wineChoiceTitle = wineResponse.productMatches[0].title;
+            wineChoiceDesc = wineResponse.productMatches[0].description;
+            wineChoiceImg = wineResponse.productMatches[0].imageUrl;
+            wineURL = "<img src ='"+ wineChoiceImg + "</img>";
+
 
             console.log(winePair1);
             console.log(winePair2);
@@ -57,6 +65,12 @@
             $('#wineDiv').append(winePair3);
             $('#wineDiv').append('<br><br>');
             $('#wineDiv').append(pairingText);
+            $('#wineDiv').append('<br><br>');
+            $('#wineDiv').append(wineChoiceTitle);
+            $('#wineDiv').append('<br><br>');
+            $('#wineDiv').append(wineChoiceDesc);
+            $('#wineDiv').append('<br><br>');
+            $('#wineDiv').append(wineURL);
 
             // wineDiv.append(wOne);
             // wineDiv.append(wTwo);
@@ -83,6 +97,7 @@
 
             // // Log the queryURL
             console.log(response);
+            foodResponse = response;
             // winePair1 = response.pairedWines[0];
             // winePair2 = response.pairedWines[1];
             // winePair3 = response.pairedWines[2];
