@@ -22,7 +22,8 @@
               </div>
             </div>
           </section>
-          <div class="hero-head">
+          <!-- navbar -->
+          <div class="hero-head"> 
             <nav class="navbar">
               <div class="container">
                 <div class="navbar-brand">
@@ -62,6 +63,7 @@
               </div>
             </nav>
           </div>
+          <!-- input field for user input -->
         <div class="container is-fluid">
             <div class="inputforms">
                 <div class="field">
@@ -110,12 +112,20 @@
                 <div class="control">
                   <div class="select is-primary">
                     <select>
+                        <!-- dietary restriction criteria -->
                       <option>Dietary Restrictions</option>
                       <option id = "nut">nut allergy</option>
-                      <option id = "dairy">dairy allergy</option>
+                      <option id = "dairy">sugar free</option>
                       <option id = "gluten">gluten allergy</option>
                     </select>
                     <br>
+                    <!-- wine pairing -->
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Do you want to include a wine pairing?
+                      </label>
+                      <br>
+                      <br>
                     <div class="buttons">
                         <button id = "submitMain" class="button is-primary is-light"> Submit </button>
                 </div>
