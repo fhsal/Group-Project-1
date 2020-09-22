@@ -7,7 +7,7 @@
 
     
 
-    var foodChoice = prompt("enter food");
+    var foodURL;
     var foodLabel1;
     var foodLabel2;
     var foodLabel3;
@@ -24,9 +24,11 @@
     var Option3Name;
     var choiceURL;
     var choiceIndex;
+
+    foodSearch = localStorage.foodSearch;
     
 
-    foodURL ="https://api.edamam.com/search?q=" + foodChoice + "&app_id=783735ac&app_key="+ appKey;
+  foodURL ="https://api.edamam.com/search?q=" + foodSearch + "&app_id=783735ac&app_key="+ appKey;
 
 $.ajax({
   url: foodURL,
@@ -99,3 +101,29 @@ $(document).ready(function () {
   });
 
 });
+
+
+function renderMenu(){
+
+foodLabel = localStorage.label;
+recipeInfo = localStorage.ingredientLines;
+recipeImage = localStorage.image;
+wineTitle = localStorage.wineChoiceTitle;
+wineURL = localStorage.wineURL;
+wineImage = localStorage.wineChoiceImg;
+wineDesc = localStorage.wineChoiceDesc;
+
+
+
+
+  $('#dinnername').append(foodLabel);
+  $('#imagefromrecipe').append(recipeImage);
+  $('#recipeinfo').append(recipeInfo);
+  $('#winename').append(wineTitle);
+  $('#wineimage').append(wineURL);
+  $('#wineinfo').append(wineDesc);
+
+
+};
+
+
