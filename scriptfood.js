@@ -24,6 +24,9 @@
     var Option3Name;
     var choiceURL;
     var choiceIndex;
+    var recipe1URL;
+    var recipe2URL;
+    var recipe3URL;
 
     foodSearch = localStorage.foodSearch;
     cuisineChoice = localStorage.cuisineChoice;
@@ -49,6 +52,10 @@ Option3Name = response.hits[2].recipe.label;
 Option1Image = "<img src ='"+ response.hits[0].recipe.image + "'</img>";
 Option2Image = "<img src ='"+ response.hits[1].recipe.image + "'</img>";
 Option3Image = "<img src ='"+ response.hits[2].recipe.image + "'</img>";
+recipe1URL = "<a href='" + foodResponse.hits[0].recipe.shareAs + "'>Recipe link</a>";
+recipe2URL = "<a href='" + foodResponse.hits[1].recipe.shareAs + "'>Recipe link</a>";
+recipe3URL = "<a href='" + foodResponse.hits[2].recipe.shareAs + "'>Recipe link</a>";
+
 
 $('.option1title').append(Option1Name);
 $('.option1title').append(Option1Image);
@@ -56,7 +63,9 @@ $('.option2title').append(Option2Name);
 $('.option2title').append(Option2Image);
 $('.option3title').append(Option3Name);
 $('.option3title').append(Option3Image);
-
+$('.option1title').append(recipe1URL);
+$('.option2title').append(recipe2URL);
+$('.option3title').append(recipe2URL);
 
 
 // $('#foodDiv').append("recipe:IMAGE " + response.hits[0].recipe.image);
