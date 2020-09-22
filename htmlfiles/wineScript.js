@@ -17,6 +17,7 @@ $(document).ready(function () {
         localStorage.cuisineChoice = cuisineChoice;
         localStorage.foodChoice = foodChoice;
         localStorage.foodSearch = cuisineChoice +"&"+ foodChoice;
+        localStorage.healthChoice = dietarySelection.value;
         location.href = "./htmlfiles/selectarecipe.html";
 
     });
@@ -44,22 +45,6 @@ $(document).ready(function () {
         localStorage.wineChoiceImg = wineChoiceImg;
     });
 
-    
-    // $("#executeSearch").on("click", function () {
-    //     console.log($('#input1').val());
-    //     console.log($('#input2').val());
-    //     console.log($('#input3').val());
-
-
-    //     // cityState = $('#searchCity').val();
-    //     // queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-    //     //             "q=" + cityState + "&units=imperial&appid=" + APIKey;
-    //     // console.log(queryURL);
-    //     // getCurrentWeather();
-    //     // getForecast();
-    //     // renderCities();
-
-    // });
   });
 
 
@@ -76,6 +61,7 @@ $(document).ready(function () {
    var wineResponse;
    var rating;
    var price; 
+   var dietaryChoice; 
 
 
 

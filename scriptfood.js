@@ -26,9 +26,12 @@
     var choiceIndex;
 
     foodSearch = localStorage.foodSearch;
+    cuisineChoice = localStorage.cuisineChoice;
+    foodChoice = localStorage.foodChoice;
+    healthChoice = localStorage.healthChoice;
     
 
-  foodURL ="https://api.edamam.com/search?q=" + foodSearch + "&app_id=783735ac&app_key="+ appKey;
+  foodURL ="https://api.edamam.com/search?q=" + foodChoice + "&xapp_id=783735ac&app_key=$"+ appKey + "&cuisineType=" +cuisineChoice + "&mealType=dinner"+"&Health="+healthChoice;
 
 $.ajax({
   url: foodURL,
