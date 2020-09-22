@@ -7,10 +7,11 @@
       <title>Dinner with Developers</title>
       <link rel="icon" type="image/png" href="../images/fav.png">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+      <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
       <link rel="stylesheet" href="../style.css">
+
       <section class="hero is-primary is-small">
          <div class="hero-body">
             <div class="container">
@@ -31,7 +32,7 @@
                </div>
                <div id="navbarMenuHeroA" class="navbar-menu">
                   <div class="navbar-end"></div>
-                  <a class="navbar-item is-active" href ="../mainhtml.html">
+                  <a class="navbar-item is-active" href ="../index.html">
                   Home
                </a>
                <span class="navbar-item">
@@ -40,21 +41,21 @@
                       <i class="fab fa-hamburger"></i>
                     </span>
 
-                     <span class="navbar-item">
-                        <a class="button is-primary is-inverted" href ="./dinnerResults.html" >
-                         <span>Dinner Search Results</span>
+                    <span class="navbar-item">
+                     <a class="button is-primary is-inverted" href ="./selectarecipe.html" >
+                     <span>Recipe Search Results</span>
 
                      <span class="navbar-item">
-                         <a class="button is-primary is-inverted" href ="./menupage.html">
-                         <span>Dinner Menu</span>
+                     <a class="button is-primary is-inverted" href ="./wine2.html">
+                     <span>Wine Pairing</span>
 
                      <span class="navbar-item">
-                         <a class="button is-primary is-inverted" href ="./wine2.html">
-                         <span>Wine Pairing</span>
+                      <a class="button is-primary is-inverted" style="color:#B30089" href ="./menupage.html">
+                      <span>Dinner Menu</span>
 
-                     <span class="navbar-item">
-                     <a class="button is-primary is-inverted" href ="./savedrecipes.html">
-                     <span>Saved Recipes </span>
+                  <span class="navbar-item">
+                  <a class="button is-primary is-inverted" style="color:darkgrey">
+                  <span>Saved Recipes </span>
                   </a>
                   </span>
                </div>
@@ -72,14 +73,15 @@
             <body>
               <section class="section">
                 <div class="container">
-                  <h1 id="recipetitle">Recipe</h1>
+                  <h1 id="recipetitle"></h1>
                   <h2 class="subtitle">
-                    <p id="recipeinfo"> recipe will display here </p> 
-                    <p id="link2original"> link to display original recipe </p> 
+                    <p id="recipeinfo"> </p> 
+                    <p id="link2original">  </p> 
                     <i id = "imagefromrecipe"></i>
-                    <h1 id="winename"> wine name will display here </h1> 
-                    <p id="wineinfo"> wine details will display here </p> 
+                    <h1 id="winename"> </h1> 
                     <i id = "wineimage"></i>
+                    <p id="wineinfo">  </p> 
+                    
                   </h2>
                 </div>
               </section>
@@ -88,11 +90,21 @@
         </section>
       </body>
       <div class="buttons">
-         <button id ="savebutton" class="button is-primary is-light"> Save Recipe </button>
+         <!-- <button id ="savebutton" class="button is-primary is-light"> Save Recipe </button> -->
       </div>
       </div>
       </div> 
    </head>
    <body>
    </body>
+   <script src= "../scriptfood.js"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+   <script>
+
+      renderMenu()
+      
+   </script>
+
+
 </html>
