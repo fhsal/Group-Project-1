@@ -30,4 +30,11 @@ h2 {
             line-height: 1.5;
     }
 }
+
+.recipe-info-list-item {
+
+    align-items: "float:right";
+}
+
+
 /* overriding bulma stylings  */
