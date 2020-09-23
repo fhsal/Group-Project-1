@@ -64,9 +64,9 @@ $('.option2title').append(Option2Name);
 $('.option2title').append(Option2Image);
 $('.option3title').append(Option3Name);
 $('.option3title').append(Option3Image);
-$('.option1title').append(recipe1URL);
-$('.option2title').append(recipe2URL);
-$('.option3title').append(recipe2URL);
+// $('.option1title').append(recipe1URL);
+// $('.option2title').append(recipe2URL);
+// $('.option3title').append(recipe2URL);
 
 
 // $('#foodDiv').append("recipe:IMAGE " + response.hits[0].recipe.image);
