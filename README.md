@@ -6,7 +6,7 @@ Team:  Hannibal Lecter
 
 Team Members: 
     - Frank Salvo
-    - Juliette Elyse
+    - Juliette Gondon
     - Mike Kolek
 
 https://fhsal.github.io/Group-Project-1/index.html
@@ -32,7 +32,6 @@ Comments are in the code as well. A screenshot is below:
 Future Developments: As we continue to update this site with more features, we plan to add functionality that allows the user to save and retrieve multiple sets of recipes and menus through use of local storage across different pages. This is currently ‘greyed-out’ on the navbar feature. 
 Along with this, we had a vision of being able to give the user an option to pick the style of their menu to fit the theme of their event. We would also like to add more food choices such as lunch, soups, salads, and desserts. We could even go the route of making a pre-fix menu for a more formal event. 
 Buon Appetit ! 
-
 
 ## User Story
 

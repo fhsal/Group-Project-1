@@ -16,6 +16,9 @@ $(document).ready(function () {
         foodChoice = $('#input2').val();
         localStorage.cuisineChoice = cuisineChoice;
         localStorage.foodChoice = foodChoice;
+        localStorage.foodSearch = cuisineChoice +"&"+ foodChoice;
+        localStorage.healthChoice = dietarySelection.value;
+        location.href = "./htmlfiles/selectarecipe.html";
 
     });
 
@@ -31,27 +34,17 @@ $(document).ready(function () {
         $('.ratingTitle').text("");
         $('.pricetitle').text("");
         
-        
         getWineParing (); 
         
-
     });
 
-    // $("#executeSearch").on("click", function () {
-    //     console.log($('#input1').val());
-    //     console.log($('#input2').val());
-    //     console.log($('#input3').val());
+    $("#saveWine").on("click", function () {
+        localStorage.wineURL = wineURL;
+        localStorage.wineChoiceDesc = wineChoiceDesc;
+        localStorage.wineChoiceTitle = wineChoiceTitle;
+        localStorage.wineChoiceImg = wineChoiceImg;
+    });
 
-
-    //     // cityState = $('#searchCity').val();
-    //     // queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-    //     //             "q=" + cityState + "&units=imperial&appid=" + APIKey;
-    //     // console.log(queryURL);
-    //     // getCurrentWeather();
-    //     // getForecast();
-    //     // renderCities();
-
-    // });
   });
 
 
@@ -68,6 +61,7 @@ $(document).ready(function () {
    var wineResponse;
    var rating;
    var price; 
+   var dietaryChoice; 
 
 
 
@@ -118,8 +112,18 @@ $(document).ready(function () {
             $('.ratingTitle').append("Rating:     " + rating);
             $('.pricetitle').append("Price:     " + price);
             
-
-
-
       })
     };  
+
+function saveWine() {
+    localStorage.wineURL = wineURL;
+    localStorage.wineChoiceDesc = wineChoiceDesc;
+    localStorage.wineChoiceTitle = wineChoiceTitle;
+    localStorage.wineChoiceImg = wineChoiceImg;
+}
+
+
+
+
+
+
