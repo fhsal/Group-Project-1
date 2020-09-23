@@ -68,29 +68,8 @@ $('.option2title').append(Option2Name);
 $('.option2title').append(Option2Image);
 $('.option3title').append(Option3Name);
 $('.option3title').append(Option3Image);
-// $('.option1title').append(recipe1URL);
-// $('.option2title').append(recipe2URL);
-// $('.option3title').append(recipe2URL);
 
 
-// $('#foodDiv').append("recipe:IMAGE " + response.hits[0].recipe.image);
-// mealImage = "<img src ='"+ response.hits[0].recipe.image + "'</img>";
-// $('#foodDiv').append(mealImage);
-// $('#foodDiv').append("recipe:LABEL " + response.hits[0].recipe.label);
-// $('#foodDiv').append("recipe:INGERD " + response.hits[0].recipe.ingredientLines);
-//   var ingreds, i, x = "";
-//   for (i = 0; i < ingredientLines.length; i++) {
-//   x += ingredientLines[i] + "<br>";
-//   }
-//     document.getElementById("demo").innerHTML = x
-          
-// $('#foodDiv').append("recipe:HEALTH " + response.hits[0].recipe.healthLabels);
-//   foodResponse = response;
-//   var health, i, x = "";
-//   for (i = 0; i < healthLabels.length; i++) {
-//   x += healthLabels[i] + "<br>";
-//   }
-//   document.getElementById("demo").innerHTML = x
 
 });
 
@@ -98,46 +77,28 @@ $(document).ready(function () {
 
   $("#saveoption1").on("click", function () {
       console.log("hello");
-      localStorage.ingredientLines = foodResponse.hits[0].recipe.ingredientLines;
-      localStorage.image = "<img src ='"+ foodResponse.hits[0].recipe.image + "'</img>"
-      localStorage.label = foodResponse.hits[0].recipe.label;
+      localStorage.ingredientLines = foodResponse.hits[0+v].recipe.ingredientLines;
+      localStorage.image = "<img src ='"+ foodResponse.hits[0+v].recipe.image + "'</img>"
+      localStorage.label = foodResponse.hits[0+v].recipe.label;
   });
 
   $("#saveoption2").on("click", function () {
     console.log("hello");
-    localStorage.ingredientLines = foodResponse.hits[1].recipe.ingredientLines;
-    localStorage.image = "<img src ='"+ foodResponse.hits[1].recipe.image + "'</img>"
-    localStorage.label = foodResponse.hits[1].recipe.label;
+    localStorage.ingredientLines = foodResponse.hits[1+v].recipe.ingredientLines;
+    localStorage.image = "<img src ='"+ foodResponse.hits[1+v].recipe.image + "'</img>"
+    localStorage.label = foodResponse.hits[1+v].recipe.label;
   });
 
   $("#saveoption3").on("click", function () {
     console.log("hello");
-    localStorage.ingredientLines = foodResponse.hits[2].recipe.ingredientLines;
-    localStorage.image = "<img src ='"+ foodResponse.hits[2].recipe.image + "'</img>"
-    localStorage.label = foodResponse.hits[2].recipe.label;
+    localStorage.ingredientLines = foodResponse.hits[2+v].recipe.ingredientLines;
+    localStorage.image = "<img src ='"+ foodResponse.hits[2+v].recipe.image + "'</img>"
+    localStorage.label = foodResponse.hits[2+v].recipe.label;
   });
 
 });
 
-//localstorage example
-// put in a value to localStroage
 
-//var myStorage - window.localStorage
-
-//saving to localStorage
-
-//var ingredientLoines = response.recipe.ingredientLines
-//myStorage.setItem('ingredientLines', JSON.stringify(ingredientLines))
-
-//get an item from 
-//var retrievedIngredientLines = JSON.parse(myStorage.getItem('ingredientLines')
-//this value will be the original array
-
-//get rid of a value 
-//mystorage.remove('ingredientLines') <---key name
-
-//drop the bomb ---> clears localStorage for the site
-//myStorage.clear()
 
 
 
