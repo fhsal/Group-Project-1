@@ -39,7 +39,8 @@ Comments are in the code as well. A screenshot is below:
 ```
 AS a potential party host
 I WANT to be able to decide on a menu for my party.
-SO THAT I can plan a grocery trip to purchase necessary foods as well as cook said recipes.
+SO THAT I can plan a grocery trip to purchase necessary foods as well as cook said recipes, AND present a menu to my guests.
+
 ```
 
 ## Acceptance Criteria
@@ -54,13 +55,3 @@ WHEN I select a meal choice
 THEN I am also paired with a drink selection.
 
 
-• Team Hannibal Lecter
-• Team Members
-    - Frank Salvo
-    - Juliette Elyse
-    - Mike Kolek
-• Project title
-    - Dining with Developers
-• Project descriptions
-    -Meal Planning 
-• (optionally) user story and/or acceptance criteria and any additional information you find necessary
