@@ -45,6 +45,7 @@ $.ajax({
 // Meal #1 response;
 console.log(foodURL);
 console.log(response.hits);
+console.log('-----response--->',response);
 foodResponse = response;
 Option1Name = response.hits[0].recipe.label;
 Option2Name = response.hits[1].recipe.label;
@@ -114,23 +115,50 @@ $(document).ready(function () {
 
 });
 
+//localstorage example
+// put in a value to localStroage
+
+//var myStorage - window.localStorage
+
+//saving to localStorage
+
+//var ingredientLoines = response.recipe.ingredientLines
+//myStorage.setItem('ingredientLines', JSON.stringify(ingredientLines))
+
+//get an item from 
+//var retrievedIngredientLines = JSON.parse(myStorage.getItem('ingredientLines')
+//this value will be the original array
+
+//get rid of a value 
+//mystorage.remove('ingredientLines') <---key name
+
+//drop the bomb ---> clears localStorage for the site
+//myStorage.clear()
+
+
 
 function renderMenu(){
 
 foodLabel = localStorage.label;
-recipeInfo = localStorage.ingredientLines;
+var recipeInfo = localStorage.getItem('ingredientLines');
 recipeImage = localStorage.image;
 wineTitle = localStorage.wineChoiceTitle;
 wineURL = localStorage.wineURL;
 wineImage = localStorage.wineChoiceImg;
 wineDesc = localStorage.wineChoiceDesc;
 
+var recipeInfoArray = recipeInfo.split(',')
 
+console.log('recipeInfo--->', recipeInfoArray)
 
 
   $('#dinnername').append(foodLabel);
   $('#imagefromrecipe').append(recipeImage);
-  $('#recipeinfo').append(recipeInfo);
+
+  recipeInfoArray.forEach(currentValue => {
+    $('#recipeinfo').append(`<li class='recipe-info-list-item'>${currentValue}</li>`)
+  })
+  //$('#recipeinfo').append(recipeInfo);
   $('#winename').append(wineTitle);
   $('#wineimage').append(wineURL);
   $('#wineinfo').append(wineDesc);
