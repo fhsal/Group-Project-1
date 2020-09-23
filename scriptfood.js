@@ -48,7 +48,7 @@ console.log(foodURL);
 console.log(response.hits);
 console.log('-----response--->',response);
 
-var v = Math.floor(Math.random() * 6);
+v = Math.floor(Math.random() * 6);
 
 foodResponse = response;
 Option1Name = response.hits[0+v].recipe.label;
