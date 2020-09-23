@@ -156,7 +156,7 @@ console.log('recipeInfo--->', recipeInfoArray)
   $('#imagefromrecipe').append(recipeImage);
 
   recipeInfoArray.forEach(currentValue => {
-    $('#recipeinfo').append(`<li class='recipe-info-list-item'>${currentValue}</li>`)
+    $('#recipeinfo').append(`<li class='recipe-info-list-item' >${currentValue}</li>`)
   })
   //$('#recipeinfo').append(recipeInfo);
   $('#winename').append(wineTitle);
