@@ -27,6 +27,7 @@
     var recipe1URL;
     var recipe2URL;
     var recipe3URL;
+    var v;
 
     foodSearch = localStorage.foodSearch;
     cuisineChoice = localStorage.cuisineChoice;
@@ -46,16 +47,19 @@ $.ajax({
 console.log(foodURL);
 console.log(response.hits);
 console.log('-----response--->',response);
+
+var v = Math.floor(Math.random() * 6);
+
 foodResponse = response;
-Option1Name = response.hits[0].recipe.label;
-Option2Name = response.hits[1].recipe.label;
-Option3Name = response.hits[2].recipe.label;
-Option1Image = "<img src ='"+ response.hits[0].recipe.image + "'</img>";
-Option2Image = "<img src ='"+ response.hits[1].recipe.image + "'</img>";
-Option3Image = "<img src ='"+ response.hits[2].recipe.image + "'</img>";
-recipe1URL = "<a href='" + foodResponse.hits[0].recipe.shareAs + "'>Recipe link</a>";
-recipe2URL = "<a href='" + foodResponse.hits[1].recipe.shareAs + "'>Recipe link</a>";
-recipe3URL = "<a href='" + foodResponse.hits[2].recipe.shareAs + "'>Recipe link</a>";
+Option1Name = response.hits[0+v].recipe.label;
+Option2Name = response.hits[1+v].recipe.label;
+Option3Name = response.hits[2+v].recipe.label;
+Option1Image = "<img src ='"+ response.hits[0+v].recipe.image + "'</img>";
+Option2Image = "<img src ='"+ response.hits[1+v].recipe.image + "'</img>";
+Option3Image = "<img src ='"+ response.hits[2+v].recipe.image + "'</img>";
+recipe1URL = "<a href='" + foodResponse.hits[0+v].recipe.shareAs + "'>Recipe link</a>";
+recipe2URL = "<a href='" + foodResponse.hits[1+v].recipe.shareAs + "'>Recipe link</a>";
+recipe3URL = "<a href='" + foodResponse.hits[2+v].recipe.shareAs + "'>Recipe link</a>";
 
 
 $('.option1title').append(Option1Name);
