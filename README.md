@@ -9,7 +9,7 @@ Team Members:
     - Juliette Gondon
     - Mike Kolek
 
-https://fhsal.github.io/Group-Project-1/index.html
+https://mkolek1015.github.io/Group-Project-1/
 
 Summary: this is a dinner planning app which allows a user to search for recipies and wine parings based upon a choice of cuisine, food type, dietary restrictions and wine pariing based upon either cuisine or food type.   The flow is based upon the user being presented with a home page which allows input of the menu criteria.  Upon selecting submit the app calls Edamam api and displays three food choices, of which the user should save one.   After saving the food choice one can navigate to the wine paring page and choose the wine first suggested based upon cuisine or switch to food-type, as many times as desired until a good pairing comes up.   The desired wine pairing should then be saved, after which the user can navigate to the menu page where their combined food + wine meal choices are displayed. 
 
