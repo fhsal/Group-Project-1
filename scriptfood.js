@@ -2,11 +2,9 @@
 
   appKey = "599a2d7927259901607333dce7693505"
 
-  //   https://api.edamam.com/search?q=indian&app_id=783735ac&
-  //   app_key=599a2d7927259901607333dce7693505&from=0&to=3&calories=591-722&health=alcohol-free
-
-    
-
+ 
+// defining variables used for the recipe selection page
+  
     var foodURL;
     var foodLabel1;
     var foodLabel2;
@@ -29,11 +27,15 @@
     var recipe3URL;
     var v;
 
+// retrieving values stored by home page listeners for use on this page  
+
     foodSearch = localStorage.foodSearch;
     cuisineChoice = localStorage.cuisineChoice;
     foodChoice = localStorage.foodChoice;
     healthChoice = localStorage.healthChoice;
+   
     
+// ajax call to call the edamam api to retrieve recipies based upon input parameters from home page 
 
   foodURL ="https://api.edamam.com/search?q=" + foodChoice + "&xapp_id=783735ac&app_key=$"+ appKey + "&cuisineType=" +cuisineChoice + "&mealType=dinner"+"&Health="+healthChoice;
 
@@ -48,6 +50,8 @@ console.log(foodURL);
 console.log(response.hits);
 console.log('-----response--->',response);
 
+// randomizing the displayed recipe choices from the 10 returned by the api
+
 v = Math.floor(Math.random() * 6);
 
 foodResponse = response;
@@ -61,6 +65,7 @@ recipe1URL = "<a href='" + foodResponse.hits[0+v].recipe.shareAs + "'>Recipe lin
 recipe2URL = "<a href='" + foodResponse.hits[1+v].recipe.shareAs + "'>Recipe link</a>";
 recipe3URL = "<a href='" + foodResponse.hits[2+v].recipe.shareAs + "'>Recipe link</a>";
 
+// appending returned choices to recipe Options page 
 
 $('.option1title').append(Option1Name);
 $('.option1title').append(Option1Image);
@@ -72,6 +77,10 @@ $('.option3title').append(Option3Image);
 
 
 });
+
+
+// listeners for save buttons under each recipe choice
+
 
 $(document).ready(function () {
 
@@ -100,7 +109,7 @@ $(document).ready(function () {
 
 
 
-
+// function to render menue on the menu page
 
 function renderMenu(){
 
